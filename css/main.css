@@ -354,21 +354,21 @@ section.me ul.list {
   border-bottom: 2px solid #000;
 }
 
-section.me ul.list > li {
+section.me ul.list>li {
   padding: 30px 60px;
 }
 
-section.me ul.list > li:first-child {
+section.me ul.list>li:first-child {
   border-bottom: 1px solid #ddd;
 }
 
-section.me ul.list > li h3 {
+section.me ul.list>li h3 {
   font-size: 18px;
   margin-bottom: 20px;
   position: relative;
 }
 
-section.me ul.list > li h3 span {
+section.me ul.list>li h3 span {
   position: absolute;
   left: -30px;
   color: #ff8342;
@@ -379,12 +379,12 @@ section.me ul.list p {
   margin-bottom: 20px;
 }
 
-section.me ul.list > li .more {
+section.me ul.list>li .more {
   font-size: 16px;
   font-weight: bold;
 }
 
-section.me ul.list > li .more span {
+section.me ul.list>li .more span {
   color: #ff8342;
   margin-left: 3px;
   font-size: 14px;
@@ -432,23 +432,29 @@ section.me ul.list ul.in li p::before {
 /* section.sns style */
 section.sns {
   /* background: lightblue; */
-  margin-bottom: 80px 0;
+  margin-bottom: 80px;
 }
 
-section.sns .sub-container {
-  margin-top: 50px;
-  padding-bottom: 30px;
+section.sns ul {
+  margin: 50px auto;
+  /* margin-top: 50px;
+  padding-bottom: 30px; */
 }
 
 section.sns .sub-container li {
   float: left;
-  width: 33.333%;
-  box-sizing: border-box;
-  height: 510px;
+  width: 32%;
+  margin-right: 2%;
+  /* box-sizing: border-box;
+  height: 510px; */
+}
+
+section.sns ul li:last-child {
+  margin-right: 0;
 }
 
 section.sns .sub-container li .img-box {
-  max-height: 220px;
+  max-height: 250px;
   overflow: hidden;
   position: relative;
 }
@@ -459,9 +465,10 @@ section.sns .sub-container li .img-box img {
 
 section.sns .sub-container li .img-box::before {
   content: '';
-  display: block;
+  /* display: block; */
   width: 0;
   height: 100%;
+  /* background: rgba (255, 131, 55, 0.75) Write this and get rid of opacity */
   background: #ff8342;
   position: absolute;
   top: 0;
@@ -469,42 +476,108 @@ section.sns .sub-container li .img-box::before {
   transition: 0.4s;
 }
 
-section.sns .sub-container li:hover .img-box::before{
+section.sns .sub-container li a:hover .img-box::before {
   width: 100%;
   opacity: 0.4;
 }
 
-section.sns .sub-container li:hover .img-box::after {
+section.sns .sub-container li a:hover .img-box::after {
   content: 'BLOG';
-  display: block;
-  list-style: 30px;
-  opacity: 0.4;
+  font-size: 15px;
+  font-family: 'EXO 2', sans-serif;
+  /* opacity: 0.4; */
+  /* display: block; */
+  /* list-style: 30px; */
   color: #fff;
-  border: 2px solid #fff;
-  padding: 10px 20px;
-  border-radius: 30px;
+  border: 1px solid #fff;
+  padding: 5px 30px;
+  border-radius: 40px;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+section.sns .sub-container li a:hover .img-box::after {
+  opacity: 1;
 }
 
 section.sns .sub-container li .bottom {
   padding: 25px;
+  box-sizing: border-box;
 }
 
-section.sns .sub-container li .bottom p{
+section.sns .sub-container li .bottom p {
   font-size: 20px;
 }
 
-section.sns .sub-container li .bottom .color {
-  color: #ff8342;
+section.sns .sub-container li .bottom p.color {
+  color: #999;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
-section.sns .sub-container li .bottom .time {
-  margin-top: 20px;
+section.sns .sub-container li .bottom p.time {
+  margin-top: 30px;
   font-size: 13px;
+  color: #999;
+}
+
+section.sns .sub-container li .bottom p.time i {
+  margin-right: 5px;
+  font-size: 0.9em;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #555;
+}
+
+footer .inner {
+  width: 84%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+footer .inner .ft-logo {
+  float: left;
+  width: 200px;
+}
+
+footer .inner .ft-logo img {
+  width: 100%;
+}
+
+footer .inner .address {
+  float: left;
+  margin: 20px 60px 0;
+}
+
+footer .inner .address li:first-child {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+footer .inner .address .en {
+  font-size: 12px;
   color: #555;
 }
 
+footer .inner .list {
+  /* background: skyblue; */
+  float: right;
+}
+
+footer .inner .list li {
+  float: left;
+  margin-right: 90px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+footer .inner .list li:last-child {
+  font-weight: bold;
+}
