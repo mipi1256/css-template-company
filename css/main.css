@@ -429,3 +429,82 @@ section.me ul.list ul.in li p::before {
   cursor: pointer;
 }
 
+/* section.sns style */
+section.sns {
+  /* background: lightblue; */
+  margin-bottom: 80px 0;
+}
+
+section.sns .sub-container {
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+section.sns .sub-container li {
+  float: left;
+  width: 33.333%;
+  box-sizing: border-box;
+  height: 510px;
+}
+
+section.sns .sub-container li .img-box {
+  max-height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+section.sns .sub-container li .img-box img {
+  width: 100%;
+}
+
+section.sns .sub-container li .img-box::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #ff8342;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+section.sns .sub-container li:hover .img-box::before{
+  width: 100%;
+  opacity: 0.4;
+}
+
+section.sns .sub-container li:hover .img-box::after {
+  content: 'BLOG';
+  display: block;
+  list-style: 30px;
+  opacity: 0.4;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+section.sns .sub-container li .bottom {
+  padding: 25px;
+}
+
+section.sns .sub-container li .bottom p{
+  font-size: 20px;
+}
+
+section.sns .sub-container li .bottom .color {
+  color: #ff8342;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+section.sns .sub-container li .bottom .time {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
